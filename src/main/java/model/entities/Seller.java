@@ -9,16 +9,18 @@ public class Seller {
     private String email;
     private LocalDate birthDate;
     private Double baseSalary;
+    private Department department;
 
     public Seller() {
     }
 
-    public Seller(Integer id, String name, String email, LocalDate birthDate, Double baseSalary) {
+    public Seller(Integer id, String name, String email, LocalDate birthDate, Double baseSalary, Department department) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.birthDate = birthDate;
         this.baseSalary = baseSalary;
+        this.department = department;
     }
 
     public Integer getId() {
@@ -61,6 +63,15 @@ public class Seller {
         this.baseSalary = baseSalary;
     }
 
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -82,6 +93,7 @@ public class Seller {
                 ", email='" + email + '\'' +
                 ", birthDate=" + birthDate +
                 ", baseSalary=" + baseSalary +
+                ", department=" + department +
                 '}';
     }
 }
